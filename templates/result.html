@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MusicTranslator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+    <section class="hero is-primary is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <h1 class="title">
+                                MusicTranslator
+                            </h1>
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="http://localhost:5000/?">
+                                Home
+                            </a>
+                            <a class="navbar-item is-active">
+                                Result
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <img src="annotated.png">
+                <br>
+                <nav class="level-center">
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <br>
+                            <form action="{{ url_for('root')}}">
+                                <input class="button is-info is-centered" type="submit" value="Read New Sheet">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                </nav>
+
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
